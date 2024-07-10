@@ -95,9 +95,9 @@ module "vpcendpoints" {
 #   main-region   = var.main-region
 # }
 
-# module "s3_dynamodb" {
-#   source = "./modules/s3-dynamodb"
-#   bucket = var.s3_bucket
-#   table  = var.dynamodb_table
-#   region = var.main-region
-# }
+module "s3_dynamodb" {
+  source = "./modules/s3-dynamodb"
+  bucket = var.s3_bucket
+  table  = var.dynamodb_table
+  region = var.main-region
+}
